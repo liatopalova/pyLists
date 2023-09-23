@@ -12,4 +12,9 @@ for char in line:
         digit_count += 1
 print(f"Number of digits in line: {digit_count}")
 
+#задача 2
 
+string = input("Enter a line please: ")
+letter = input("Enter a symbol:")
+symbol_count = string.count(letter)
+print(f"Number of symbols in string: {symbol_count}")
