@@ -43,3 +43,41 @@ print(text_line[1::2])
 print(text_line[::-1])
 print(text_line[-1::-2])
 print(len(text_line))
+
+#додатково
+
+some_text = "nay, thou 1 art not dead. ukraine,and 2 the skies! a brethren,smile 3: once more!!!"
+
+new_text = ""
+capitalize_next = True
+for char in some_text:
+    if capitalize_next and char.isalpha():
+        new_text += char.upper()
+        capitalize_next = False
+    else:
+        new_text += char
+
+    if char in [".", "!", "?"]:
+        capitalize_next = True
+print(new_text)
+
+digit_count = 0
+for char in some_text:
+    if char.isdigit():
+        digit_count += 1
+print(f"Number of digits in line: {digit_count}")
+
+pun_mark = [",", ".", "!", ":", ";", "?", "-"]
+result = 0
+for char in some_text:
+    if char in pun_mark:
+        result += 1
+print(f"Punctuation: {result}")
+
+ex_mark = "!"
+result = 0
+for ex_mark in some_text:
+    if ex_mark == "!":
+        result += 1
+print(f"Exclamation: {result}")
+
